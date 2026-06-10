@@ -1,4 +1,4 @@
-from calculators import give_BMI_calculator, give_pace
+from calculators import give_BMI_calculator, give_pace, give_HR_max
 def give_menu():
     print('\n===== Sport Calculators CLI =====')
 
@@ -20,7 +20,7 @@ def main():
         elif option == '2':
             give_pace()
         elif option == '3':
-            print('here will be a Maximum Heat Rate')
+            give_HR_max()
         elif option == '4':
             print('here will be a Heart Rate Zones')
         elif option == '5':

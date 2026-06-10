@@ -28,3 +28,12 @@ def give_pace():
 
     pace = time/distance 
     print(f'\nRunning pace = {round(pace,2)} min/km')
+
+def give_HR_max():
+    
+    print('\n===== Maximum Heart Rate =====')
+    
+    age = input_numbers('\nEnter age: ')
+    weight = input_numbers('\nEnter weight (kg): ')
+    hr_max = 210 - (0.5*age) - (0.022*weight)
+    print(f'\nMaximum Heart Rate = {round(hr_max,2)} bpm')
