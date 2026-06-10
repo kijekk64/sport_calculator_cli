@@ -1,8 +1,10 @@
+from input_utils import input_numbers
+
 def give_BMI_calculator():
     print('\n===== BMI Calculator =====')
    
-    weight = float(input('\nEnter weight (kg): '))
-    height = float(input('\nEnter heigh (m): '))
+    weight = input_numbers('\nEnter weight (kg): ')
+    height = input_numbers('\nEnter heigh (m): ')
     
     BMI = weight/(height**2)
     print(f'\nBMI = {round(BMI,2)}')
