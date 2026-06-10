@@ -1,6 +1,7 @@
 from input_utils import input_numbers
 
 def give_BMI_calculator():
+    
     print('\n===== BMI Calculator =====')
    
     weight = input_numbers('\nEnter weight (kg): ')
@@ -17,3 +18,13 @@ def give_BMI_calculator():
         print('\nCategory: overweight')
     else:
         print('\nCategory: obesity')
+    
+def give_pace():
+    
+    print('\n===== Pace =====')
+    
+    distance = input_numbers('\nEnter distance (km): ')
+    time = input_numbers('\nEnter time (min): ')
+
+    pace = time/distance 
+    print(f'\nRunning pace = {round(pace,2)} min/km')
