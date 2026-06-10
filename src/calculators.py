@@ -1,15 +1,9 @@
-from input_utils import input_numbers
-
-def give_BMI_calculator():
-    
-    print('\n===== BMI Calculator =====')
-   
-    weight = input_numbers('\nEnter weight (kg): ')
-    height = input_numbers('\nEnter heigh (m): ')
+def give_BMI_calculator(weight,height):
     
     BMI = weight/(height**2)
-    print(f'\nBMI = {round(BMI,2)}')
-    
+    return BMI
+
+def give_category(BMI):
     if BMI <= 18.5:
         print("\nCategory: underweight")
     elif BMI > 18.5 and BMI <= 24.9:
@@ -19,21 +13,12 @@ def give_BMI_calculator():
     else:
         print('\nCategory: obesity')
     
-def give_pace():
+def give_pace(distance, time):
     
-    print('\n===== Pace =====')
-    
-    distance = input_numbers('\nEnter distance (km): ')
-    time = input_numbers('\nEnter time (min): ')
-
     pace = time/distance 
-    print(f'\nRunning pace = {round(pace,2)} min/km')
+    return pace
 
-def give_HR_max():
+def give_HR_max(age,weight):
     
-    print('\n===== Maximum Heart Rate =====')
-    
-    age = input_numbers('\nEnter age: ')
-    weight = input_numbers('\nEnter weight (kg): ')
     hr_max = 210 - (0.5*age) - (0.022*weight)
-    print(f'\nMaximum Heart Rate = {round(hr_max,2)} bpm')
+    return hr_max
