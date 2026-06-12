@@ -22,3 +22,12 @@ def give_HR_max(age,weight):
     
     hr_max = 210 - (0.5*age) - (0.022*weight)
     return hr_max
+
+def give_heart_rate_zones(hr_max):
+    return {
+        'Zone 1 - Recovery': (int(hr_max * 0.50), int(hr_max * 0.60)),
+        'Zone 2 - Easy': (int(hr_max * 0.60), int(hr_max * 0.70)),
+        'Zone 3 - Moderate': (int(hr_max * 0.70), int(hr_max * 0.80)),
+        'Zone 4 - Hard': (int(hr_max * 0.80), int(hr_max * 0.90)),
+        'Zone 5 - Max': (int(hr_max * 0.90), int(hr_max)),
+    }
