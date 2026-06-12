@@ -137,7 +137,7 @@ def main():
             break
         
         else:
-            print('Invalid option.')
+            print('\nInvalid option.')
 
 if __name__ == "__main__":
     main()
