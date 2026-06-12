@@ -41,9 +41,9 @@ def show_profile():
 
     print('-'*20)
 
-    for data in profile.items():
+    for given, answer in profile.items():
         
-        print(f'{data}')
+        print(f'{given}: {answer}')
     
     print('-'*20)
 
@@ -126,10 +126,11 @@ def main():
 
             print('-'*35)
 
-            for one_zone in zones.items():
-
-                print(f'{one_zone} bpm')
-        
+            for zone_name, heart_range in zones.items():
+                
+                low, high = heart_range
+                print(f'{zone_name}: {low}-{high}  bpm')
+            
             print('-'*35)
 
         elif option == '6':
